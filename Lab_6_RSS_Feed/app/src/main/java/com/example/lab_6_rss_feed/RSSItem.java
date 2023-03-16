@@ -13,6 +13,16 @@ public class RSSItem {
     private String link = null;
     private String pubDate = null;
 
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
+
+    private String imageLink = null;
+
 
     private SimpleDateFormat dateInFormat =
             new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
