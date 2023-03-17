@@ -38,6 +38,7 @@ public class ItemsActivity extends AppCompatActivity implements AdapterView.OnIt
 
         titleTextView = (TextView)findViewById(R.id.FeedTitle);
         itemsListView = (ListView)findViewById(R.id.itemsList);
+        itemsListView.setOnItemClickListener(this);
 
         new DownloadFeed().execute();
     }
