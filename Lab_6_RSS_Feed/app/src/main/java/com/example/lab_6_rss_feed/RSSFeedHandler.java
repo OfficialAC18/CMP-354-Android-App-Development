@@ -1,5 +1,7 @@
 package com.example.lab_6_rss_feed;
 
+import android.util.Log;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -11,34 +13,35 @@ public class RSSFeedHandler extends DefaultHandler {
     private RSSItem item;
 
     // For Each Item in RSS Feed
-    private Boolean isTitle;
-    private Boolean isLink;
-    private Boolean isDescription;
-    private Boolean isImage;
-    private Boolean isPubDate;
+    private boolean isTitle = false;
+    private boolean isLink = false;
+    private boolean isDescription = false;
+    private boolean isImage = false;
+    private boolean isPubDate = false;
 
-    private Boolean feedTitleRead;
-    private Boolean feedPubDateRead;
-    private Boolean initialFeedLinkRead;
+    private boolean feedTitleRead = false;
+    private boolean feedPubDateRead = false;
+    private boolean initialFeedLinkRead = false;
 
-    public RSSFeedHandler(){
-        feed = new RSSFeed();
-        feedTitleRead = false;
-        initialFeedLinkRead = false;
+    public void startDocument() throws SAXException {
+            feed = new RSSFeed();
+            item = new RSSItem();
     }
+
 
     public RSSFeed getFeed(){
         return feed;
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName,
+                             String qName, Attributes attributes) throws SAXException {
 
         if(qName.equals("item")){
             item = new RSSItem();
         }
         else if(qName.equals("lastBuildDate")){
-            feedPubDateRead = true;
+           feedPubDateRead = true;
         }
         else if(qName.equals("title")){
             isTitle = true;
@@ -56,9 +59,6 @@ public class RSSFeedHandler extends DefaultHandler {
             isPubDate = true;
         }
 
-
-
-
     }
 
     @Override
@@ -73,15 +73,17 @@ public class RSSFeedHandler extends DefaultHandler {
         if(feedPubDateRead){
             feed.setPubDate(new String(buffer, start, length));
             feedPubDateRead = false;
+            Log.d("Lab-6","Feed Date Read");
         }
         else if(isTitle){
             if(!feedTitleRead){
                 feed.setTitle(new String(buffer, start, length));
                 feedTitleRead = true;
+                Log.d("Lab-6","Feed Title Read");
             }
             else{
                 item.setTitle(new String(buffer, start, length));
-
+                Log.d("Lab-6","Item Title Read");
             }
             isTitle = false;
         }
@@ -90,21 +92,27 @@ public class RSSFeedHandler extends DefaultHandler {
                 initialFeedLinkRead = true;
             } else {
                 item.setLink(new String(buffer, start, length));
+                Log.d("Lab-6","Item Link Read");
             }
             isLink = false;
         }
         else if(isDescription){
                 item.setDescription(new String(buffer, start, length));
                 isDescription = false;
-            }
+                Log.d("Lab-6","Item Description Read");
+        }
         else if(isImage){
             item.setImageLink(new String(buffer, start, length));
             isImage = false;
+            Log.d("Lab-6","Item Image Read");
         }
         else if(isPubDate){
             item.setPubDate(new String(buffer, start, length));
             isPubDate = false;
+            Log.d("Lab-6","Item PubDate Read");
         }
 
     }
 }
+
+

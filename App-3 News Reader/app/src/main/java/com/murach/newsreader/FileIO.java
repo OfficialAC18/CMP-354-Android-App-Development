@@ -16,7 +16,7 @@ import android.util.Log;
 
 public class FileIO {
     
-    private final String URL_STRING = "http://rss.cnn.com/rss/edition_sport.rss";
+    private final String URL_STRING = "https://www.airbus.com/en/rss-all-feeds/15581?fid=29716";//"http://rss.cnn.com/rss/edition_sport.rss";
     private final String FILENAME = "news_feed.xml";
     private Context context = null;
     

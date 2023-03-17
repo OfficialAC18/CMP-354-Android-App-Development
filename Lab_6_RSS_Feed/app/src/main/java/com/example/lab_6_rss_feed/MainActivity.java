@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.dfns_btn:
-                Intent intent2 = new Intent(getApplicationContext(), ItemActivity.class);
+                Intent intent2 = new Intent(getApplicationContext(), ItemsActivity.class);
                 intent2.putExtra("Link", allLinks.get(2));
                 startActivity(intent2);
                 break;

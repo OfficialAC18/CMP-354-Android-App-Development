@@ -2,16 +2,19 @@ package com.example.lab_6_rss_feed;
 
 import android.util.Log;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class RSSItem {
+public class RSSItem implements Serializable {
 
     private String title = null;
     private String description = null;
     private String link = null;
     private String pubDate = null;
+    private String imageLink = null;
+
 
     public String getImageLink() {
         return imageLink;
@@ -21,11 +24,11 @@ public class RSSItem {
         this.imageLink = imageLink;
     }
 
-    private String imageLink = null;
+
 
 
     private SimpleDateFormat dateInFormat =
-            new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
+            new SimpleDateFormat("EEE, dd/mm/yyyy - HH:mm");
 
     private SimpleDateFormat dateOutFormat =
             new SimpleDateFormat("dd-MMM-yyyy EEEE hh:mm");

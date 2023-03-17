@@ -23,7 +23,7 @@ public class FileIO {
     private final String FILENAME = "news_feed.xml";
     private Context context = null;
 
-    public FileIO(Context context, String URL ){
+    public FileIO(Context context, String URL){
         this.context = context;
         this.URL = URL;
     }
@@ -44,7 +44,8 @@ public class FileIO {
             byte[] buffer = new byte[1024];
             int bytesRead = in.read(buffer);
             while(bytesRead != -1){
-                out.write(bytesRead);
+
+                out.write(buffer, 0, bytesRead);
                 bytesRead = in.read(buffer);
             }
             out.close();
@@ -90,4 +91,7 @@ public class FileIO {
         }
 
     }
+
+
+
 }
