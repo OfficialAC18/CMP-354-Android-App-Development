@@ -2,12 +2,21 @@ package com.example.lab_6_rss_feed;
 
 import android.content.Context;
 
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 public class FileIO {
     private String URL;
@@ -41,12 +50,44 @@ public class FileIO {
             out.close();
             in.close();
 
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public RSSFeed readFile()  {
+        try{
+        SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser saxParser = factory.newSAXParser();
+        XMLReader xmlreader = saxParser.getXMLReader();
+
+
+        //Parse the file
+        RSSFeedHandler handler = new RSSFeedHandler();
+        xmlreader.setContentHandler(handler);
+
+        //Read File
+        FileInputStream in = context.openFileInput(FILENAME);
+
+        //Create InputSource from Data and then pass it to xmlreader
+        InputSource is = new InputSource(in);
+        xmlreader.parse(is);
+
+        //Retrieve data from the feed handler
+        RSSFeed feed = handler.getFeed();
+        return feed;
+        }
+        catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (SAXException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

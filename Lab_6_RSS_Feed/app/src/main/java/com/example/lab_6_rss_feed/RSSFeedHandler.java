@@ -27,6 +27,10 @@ public class RSSFeedHandler extends DefaultHandler {
         initialFeedLinkRead = false;
     }
 
+    public RSSFeed getFeed(){
+        return feed;
+    }
+
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
