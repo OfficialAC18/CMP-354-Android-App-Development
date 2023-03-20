@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.share_menu:
                 Intent intent = new Intent(getApplicationContext(), Share_bill.class);
                 someActivityResultLauncher.launch(intent);
-                Log.d("Lab-4", "Execution Completed");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

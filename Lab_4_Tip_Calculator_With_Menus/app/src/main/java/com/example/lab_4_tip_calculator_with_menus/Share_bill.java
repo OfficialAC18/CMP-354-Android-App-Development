@@ -2,6 +2,7 @@ package com.example.lab_4_tip_calculator_with_menus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +22,7 @@ public class Share_bill extends AppCompatActivity implements View.OnClickListene
 
         numPersons = (EditText) findViewById(R.id.numPersons_txt);
         submit = (Button) findViewById(R.id.numPersons_btn);
-
+        intent = new Intent();
         submit.setOnClickListener(this);
 
 
@@ -29,10 +30,9 @@ public class Share_bill extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        intent = getIntent();
         int numP = Integer.parseInt(numPersons.getText().toString());
         intent.putExtra("Num Persons",numP);
-        //setResult(0,intent);
+        setResult(Activity.RESULT_OK,intent);
         finish();
     }
 }
