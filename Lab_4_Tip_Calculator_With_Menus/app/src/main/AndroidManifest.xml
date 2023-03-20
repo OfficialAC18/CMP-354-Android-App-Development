@@ -10,9 +10,14 @@
         android:theme="@style/Theme.Lab_4_Tip_Calculator_With_Menus"
         tools:targetApi="25">
         <activity
+            android:name=".about"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
             android:name=".Share_bill"
-            android:launchMode="singleTop"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTop" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

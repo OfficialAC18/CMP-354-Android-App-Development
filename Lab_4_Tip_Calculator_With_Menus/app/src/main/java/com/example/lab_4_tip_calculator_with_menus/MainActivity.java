@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.about_menu:
+                Intent intent1 = new Intent(getApplicationContext(),about.class);
+                startActivity(intent1);
                 return true;
             case R.id.help_menu:
                 Toast.makeText(this, "Help feature not implemented", Toast.LENGTH_SHORT).show();
