@@ -9,4 +9,4 @@ List of Applications
 - [X] Lab-5 Button-less Tip Calculator, Widgets have handlers
 - [X] Lab-6 RSS Feed App (For this iteration, using Airbus RSS Feeds) 
 - [X] Lab-7 Services
-- [ ] Lab-8
+- [X] Lab-8 Foreground Services, Broadcast Recievers
