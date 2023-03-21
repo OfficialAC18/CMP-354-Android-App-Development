@@ -2,7 +2,7 @@
 Code Repository for all apps covered in CMP-354 at the American University of Sharjah
 
 List of Applications 
-- [ ] Lab-1
+- [X] Lab-1 Basic Math Skills Checker
 - [ ] Lab-2
 - [X] Lab-3 Tip Calculator, Using A Button to initiate handling
 - [X] Lab-4 Tip Calculator, Using Menus
