@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/airbusUpdates_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EA5455"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="What's New - Airbus"
+        android:textColor="#F8F7F7"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/cmrcl_arcrft_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_button"
+        android:text="Commerical Aircraft"
+        android:textColor="#E8DFDF" />
+
+    <Button
+        android:id="@+id/heli_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_button"
+        android:text="Helicopters"
+        android:textColor="#FAF4F4" />
+
+    <Button
+        android:id="@+id/dfns_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_button"
+        android:text="Defence"
+        android:textColor="#EDE5E5" />
+</LinearLayout>
