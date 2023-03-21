@@ -8,5 +8,5 @@ List of Applications
 - [X] Lab-4 Tip Calculator, Using Menus
 - [X] Lab-5 Button-less Tip Calculator, Widgets have handlers
 - [X] Lab-6 RSS Feed App (For this iteration, using Airbus RSS Feeds) 
-- [X] Lab-7
+- [X] Lab-7 Services
 - [ ] Lab-8
