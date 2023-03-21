@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/startService_menu"
+        android:title="Start Service" />
+    <item
+        android:id="@+id/stopService_menu"
+        android:title="Stop Service" />
+</menu>
