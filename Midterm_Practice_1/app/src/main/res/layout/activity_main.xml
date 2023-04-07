@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="News From Past"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E88E5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="--Choose Feed Source--"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_term_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="SearchTerm"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/top_news_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top News"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/world_news_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="World News"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/biz_news_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buisness News"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/tech_news_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Technology News"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/disp_news_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Display News Items"
+            android:textAllCaps="false"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E88E5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="News From Past"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/num_days_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/one_day_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Day"
+                android:textSize="34sp" />
+
+            <RadioButton
+                android:id="@+id/two_day_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Days"
+                android:textSize="34sp" />
+
+            <RadioButton
+                android:id="@+id/one_week_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Week"
+                android:textSize="34sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>
