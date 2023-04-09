@@ -10,3 +10,5 @@ List of Applications
 - [X] Lab-6 RSS Feed App (For this iteration, using Airbus RSS Feeds) 
 - [X] Lab-7 Services
 - [X] Lab-8 Foreground Services, Broadcast Recievers
+- [ ] Lab-9 Firebase
+- [X] Lab-10 Adding DB Functionality 
