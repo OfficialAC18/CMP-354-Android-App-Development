@@ -12,3 +12,4 @@ List of Applications
 - [X] Lab-8 Foreground Services, Broadcast Recievers
 - [ ] Lab-9 Firebase
 - [X] Lab-10 Adding DB Functionality 
+- [X] Lab-11 GPS Functionality
